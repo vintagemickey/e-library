@@ -1,0 +1,578 @@
+/*--------------------------------index.html---------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "Raleway", serif;
+    color: #222222;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    width: 1500px;
+    margin: auto
+}
+
+ul {
+    list-style: none;
+}
+
+#oval {
+    position: absolute;
+    background: url('assets/ellipse.png');
+    background-size: cover;
+    width: 100%;
+    height: 1020px;
+    background-repeat: no-repeat;
+    z-index: -1;
+    top: 770px;
+}
+
+.button {
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 15px 30px;
+    background-color: rgba(25, 70, 186, 0.85);
+    border: none;
+    border-radius: 2px;
+
+}
+
+.button:hover,
+.header__lang,
+.search__button {
+    cursor: pointer;
+}
+
+.header-main {
+    height: 100px;
+    margin-top: 40px;
+}
+
+.header-main__nav,
+.header-main__nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+.header-main__nav-links {
+    align-items: center;
+}
+
+.header-main__nav-link-item:first-child {
+    margin-right: 30px;
+}
+
+.header-main__lang {
+    color: #9F9F9F;
+    font-size: 14px;
+    border: none;
+}
+
+.search-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.search-main__title {
+    font-size: 36px;
+}
+
+.search-main__form {
+    margin: 0 0 30px 0;
+    position: relative;
+}
+
+.search-main__input {
+    width: 670px;
+    height: 57px;
+    border: none;
+    box-shadow: 0px 10px 9px 0px rgba(0, 0, 0, 0.10);
+    padding: 0 15px;
+    border-radius: 2px;
+}
+
+.search-main__input::placeholder {
+    color: #C8C8C8;
+}
+
+.search-main__button {
+    border: none;
+    background-color: none;
+    background-color: unset;
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    border-left: 1px solid rgba(204, 204, 204, 1);
+    padding-left: 10px;
+}
+
+.search-main__button>a>img {
+    height: 19px;
+    margin-top: 3px;
+}
+
+.search-main__buttons>button:first-child {
+    margin-right: 30px;
+}
+
+.about {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 200px;
+}
+
+.about__article {
+    width: 315px;
+    box-shadow: 6px -4px 20px 0px rgba(0, 0, 0, 0.10);
+    border-radius: 4px;
+    padding: 60px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFFFFF;
+}
+
+.article__decription {
+    font-weight: 600;
+    text-align: center;
+    color: rgba(159, 159, 159, 1);
+    margin: 0;
+}
+
+main {
+    margin-bottom: 100px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #3b61c4;
+    padding: 100px 30px;
+}
+
+.footer__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer__column {
+    margin-right: 120px;
+}
+
+.footer__column>h3 {
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+.footer__column:last-child {
+    padding: 90px 0 0 0;
+    margin: 0;
+}
+
+.footer__links {
+    padding: 0;
+}
+
+.footer__link-item,
+.footer__link-item>a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.footer__link-item {
+    margin-bottom: 20px;
+}
+
+.footer__social-item>img {
+    height: 32px;
+    opacity: 0.4;
+    margin-right: 5px;
+}
+
+.footer__banner {
+    background-color: #345bc2;
+    height: 74px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer__banner-text {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/*--------------------------------search.html---------------------------------------*/
+
+.header {
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.10);
+}
+
+.header__nav,
+.header__nav-links,
+.header__profile,
+.search__main,
+.search__result-item,
+.search__header,
+.search__filter-header,
+.search__filter-year-form,
+.search__filter-year-title,
+.search__filter-authors-title,
+.search__filter-imprint-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.search__main {
+    align-items: flex-start;
+}
+
+.header__nav {
+    justify-content: space-between;
+    height: 50px;
+}
+
+.header__logo {
+    height: 40px;
+    margin-right: 40px;
+}
+
+.header__nav-links {
+    justify-content: flex-start;
+}
+
+.search__form {
+    position: relative;
+    margin-right: 100px;
+}
+
+.search__input {
+    width: 320px;
+    height: 40px;
+    border: 1px solid #D9D9D9;
+    padding: 0 15px;
+    border-radius: 2px;
+}
+
+.search__input::placeholder {
+    color: #D9D9D9;
+    font-weight: 700;
+}
+
+.search__button {
+    border: none;
+    background-color: unset;
+    position: absolute;
+    right: 7px;
+    top: 7px;
+    border-left: 1px solid #D9D9D9;
+    padding-left: 10px;
+}
+
+.search__button>a>img {
+    height: 19px;
+    margin-top: 3px;
+}
+
+.header__lang {
+    border: none;
+    color: #494949;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.header__profile {
+    margin-right: 100px;
+}
+
+.header__profile-img {
+    height: 34px;
+    border-radius: 34px;
+    margin-right: 10px;
+}
+
+.header__profile-name {
+    color: #494949;
+    font-size: 14px;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.header__profile-arrow {
+    width: 15px;
+}
+
+.search__results {
+    margin-top: 60px;
+    width: 930px;
+    box-shadow: 0px 9px 18px 0px rgba(0, 0, 0, 0.10);
+    display: flex;
+    flex-direction: column;
+    padding: 60px 60px 60px 100px;
+}
+
+.search__header {
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 30px;
+}
+
+.search__header-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.search__header-number {
+    color: #F21F5B;
+    font-size: 14px;
+}
+
+.search__header-number>span {
+    font-size: 14px;
+    color: #F21F5B;
+    font-weight: 700;
+}
+
+.search__header-title {
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.search__header-buttons>a>img {
+    height: 20px;
+    padding: 0 10px;
+}
+
+.search__header-buttons>a:last-child>img {
+    border-left: 1px solid #C4C4C4;
+    padding-right: 0;
+}
+
+
+.search__result-item {
+    border-top: 1px solid #C4C4C4;
+    border-bottom: 1px solid #C4C4C4;
+    padding: 20px 0;
+    justify-content: space-between;
+    margin-top: -1px;
+}
+
+.search__result-img {
+    height: 135px;
+}
+
+.search__result-description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 700px;
+}
+
+.search__result-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.search__result-description-item {
+    margin-bottom: 6px;
+}
+
+.search__result-description-item>span {
+    font-weight: 700;
+}
+
+.search__result-arrow {
+    width: 27px;
+}
+
+.search__button-more {
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 9px 18px 0px rgba(0, 0, 0, 0.10);
+    margin-top: 50px;
+    background-color: #FAF9F9;
+    font-weight: 700;
+    height: 42px;
+}
+
+.search__pagination {
+    height: 42px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0px 9px 18px 0px rgba(0, 0, 0, 0.10);
+    margin-top: 20px;
+    background-color: #FAF9F9;
+}
+
+.search__pagination-item-arrow>img {
+    height: 10px;
+    width: 10px;
+}
+
+.search__pagination-item-num {
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.search__filters {
+    margin-top: 60px;
+    width: 230px;
+    box-shadow: 0px 9px 18px 0px rgba(0, 0, 0, 0.10);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-left: 30px;
+}
+
+.search__filter-header,
+.search__filter-year-form,
+.search__filter-year-title {
+    justify-content: space-between;
+}
+
+.search__filter-header>span {
+    font-weight: 700;
+}
+
+.search__filter-header>img {
+    width: 18px;
+}
+
+.search__filter-year,
+.search__filter-authors,
+.search__filter-imprint {
+    margin-top: 30px;
+}
+
+.search__filter-year-form>span {
+    color: #C4C4C4;
+}
+
+.search__filter-year-title {
+    align-items: flex-start;
+}
+
+.search__filter-year-title>span,
+.search__filter-authors-title>span,
+.search__filter-imprint-title>span {
+    font-size: 14px;
+    font-weight: 700;
+    color: #F21F5B;
+    margin-bottom: 10px;
+}
+
+.search__filter-authors-title>span,
+.search__filter-imprint-title>span {
+    color: #222222;
+}
+
+.search__filter-year-title>img,
+.search__filter-authors-title>img,
+.search__filter-imprint-title>img {
+    height: 20px;
+}
+
+.search__filter-year-from>input,
+.search__filter-year-to>input {
+    width: 95px;
+    height: 36px;
+    border: 1px solid #C4C4C4;
+    font-size: 14px;
+    padding: 7px;
+}
+
+.search__filter-year-form>input::placeholder {
+    color: #C4C4C4;
+}
+
+-from,
+.search__filter-year-to {
+    position: relative;
+}
+
+.search__filter-year-clean {
+    position: absolute;
+    z-index: 1;
+    right: 7px;
+    top: 10px;
+}
+
+.search__filter-year-clean>img {
+    height: 16px;
+}
+
+.search__filter-authors-title,
+.search__filter-imprint-title {
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.search__filter-author-item,
+.search__filter-imprint-item {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.search__filter-author-item:last-of-type,
+.search__filter-imprint-more:last-of-type {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.search__filter-authors-more,
+.search__filter-imprint-more {
+    text-decoration: underline;
+    color: #345bc2;
+    font-size: 12px;
+}
+
+.search__filter-imprint-item {
+    display: flex;
+    align-items: center;
+}
+
+.search__filter-imprint-item>input[type="checkbox"]:checked {
+    border: 2px solid #F21F5B;
+}
+
+.search__filter-imprint-item>input[type="checkbox"] {
+    border: 1px solid #C4C4C4;
+    accent-color: white;
+    appearance: none;
+    height: 15px;
+    width: 15px;
+    position: relative;
+}
+
+.search__filter-imprint-item>input[type="checkbox"]:checked::after {
+    content: "";
+    background-image: url('assets/check.svg');
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -5px;
+    left: 0px;
+    width: 16px;
+    height: 16px;
+    color: #F21F5B;
+}

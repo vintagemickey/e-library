@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <title>Электронная библиотека ИТМО</title>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header-main">
+            <nav class="header-main__nav">
+                <ul class="header-main__nav-links">
+                    <li class="header-main__nav-link-item">
+                        <select class="header-main__lang" name="lang">
+                            <option class="header-main__lang-option">RU</option>
+                            <option class="header-main__lang-option">EN</option>
+                        </select>
+                    </li>
+                    <li class="header-main__nav-link-item">
+                        <button class="header-main__login-button button">Войти</button>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="search-main">
+                <h1 class="search-main__title">Электронная библиотека</h1>
+                <form class="search-main__form">
+                    <input class="search-main__input" type="search" placeholder="Что будем искать?">
+                    <button class="search-main__button"><a href="/search.html"><img
+                                src="assets/search.svg"></a></button>
+                </form>
+                <div class="search-main__buttons">
+                    <button class="button">Расширенный поиск</button>
+                    <button class="button">Атрибутный поиск</button>
+                </div>
+            </section>
+            <section class="about">
+                <article class="about__article">
+                    <img class="article__img" src="assets/article-1.png">
+                    <h2 class="article__title">Цели и задачи</h2>
+                    <p class="article__decription">Электронная библиотека ИТМО ориентирована на обеспечение
+                        информационных потребностей пользователей в процессе обучения и научной деятельности</p>
+                </article>
+                <article class="about__article">
+                    <img class="article__img" src="assets/article-2.png">
+                    <h2 class="article__title">Личный кабинет</h2>
+                    <p class="article__decription">Авторизованные пользователи имеют возможность пользоваться
+                        дополнительными сервисами Личного кабинета, включая создание списков электронных ресурсов,
+                        сохранение поисковых запросов, создание конспектов из фрагментов электронных произведений</p>
+                </article>
+                <article class="about__article">
+                    <img class="article__img" src="assets/article-3.png">
+                    <h2 class="article__title">Авторам</h2>
+                    <p class="article__decription">Порядок приема и использования произведений регулируются в
+                        соответствии с действующим законодательством, локальными нормативными актами СПбПУ и прямыми
+                        договорами с правообладателями. На сайте ФБ СПбПУ приведена информация для авторов, включая
+                        порядок приема и оформления электронных документов.</p>
+                </article>
+            </section>
+        </main>
+    </div>
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <div class="footer__column">
+                <h3>ITMO.STUDENTS</h3>
+                <ul class="footer__links">
+                    <li class="footer__link-item"><a href="#">Студенческий жизнь</a></li>
+                    <li class="footer__link-item"><a href="#">Студенческая офис</a></li>
+                    <li class="footer__link-item"><a href="#">Мероприятия</a></li>
+                    <li class="footer__link-item"><a href="#">Возможности</a></li>
+                    <li class="footer__link-item"><a href="#">Обучение</a></li>
+                    <li class="footer__link-item"><a href="#">Кампус</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h3>СЕРВИСЫ</h3>
+                <ul class="footer__links">
+                    <li class="footer__link-item"><a href="#">Расписание и сессия</a></li>
+                    <li class="footer__link-item"><a href="#">Запись в офис</a></li>
+                    <li class="footer__link-item"><a href="#">Заказать документы</a></li>
+                    <li class="footer__link-item"><a href="#">Корпроративные сервисы</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h3>КОНТАКТЫ</h3>
+                <ul class="footer__links">
+                    <li class="footer__link-item">г. Санкт - Петербург , ул. Ломоносова , д. 9 , оф. 1400</li>
+                    <li class="footer__link-item">Телефон : + 7 ( 812 ) 607 - 04 - 74</li>
+                    <li class="footer__link-item">email : so@itmo.ru </li>
+                    <li class="footer__link-item">Время работы : пн-пт с 9:00 до 19:00</li>
+                    <li class="footer__link-item">
+                        <div class="footer__social">
+                            <a class="footer__social-item"><img src="assets/vk.svg" alt="VK"></a>
+                            <a class="footer__social-item"><img src="assets/twitter.svg" alt="Twitter"></a>
+                            <a class="footer__social-item"><img src="assets/instagram.png" alt="Instagram"></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <img src="assets/building.png">
+            </div>
+        </div>
+    </footer>
+    <div class="footer__banner">
+        <span class="footer__banner-text">Минобрнауки России</span>
+    </div>
+    <div id="oval"></div>
+</body>
+
+</html>
