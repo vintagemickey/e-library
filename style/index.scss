@@ -1,0 +1,146 @@
+$headerMainHeight: 140px;
+$headerMainLangFontSize: 14px;
+
+.header-main {
+  width: $globalWidth-3xl;
+  height: $headerMainHeight;
+  @include displayFlex(row,right);
+
+  &__nav-links {
+    @include displayFlex(row, right, center);
+  }
+
+  &__nav-link-item:first-child {
+    margin-right: 3vh;
+  }
+
+  &__lang {
+    font-size: $headerMainLangFontSize;
+    color: $globalGreyColor;
+    border: none;
+  }
+}
+
+.search-main {
+  @include displayFlex(column, space-between, center);
+  height: 27vh;
+
+  &__title {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  &__form {
+    position: relative;
+  }
+
+  &__input {
+    width: 670px;
+    height: 57px;
+    border: none;
+    box-shadow: $globalBoxShadow;
+    padding: 0 2vh;
+    border-radius: $globalBorderRadius;
+    font-size: $inputFontSize;
+  }
+
+  &__input::placeholder {
+    color: $globalGreyColor;
+  }
+
+  &__button {
+    @include search-button($globalBlueColor, 18px, 20px);
+  }
+
+  &__buttons>button:first-child {
+    margin-right: 30px;
+  }
+}
+
+.about {
+  @include displayFlex(row, space-around, flex-start);
+
+  &__article {
+    @include displayFlex(column, flex-start, center);
+    width: 30vh;
+    height: 35vh;
+    box-shadow: $globalBoxShadow;
+    border-radius: 4px;
+    padding: 5vh 3vh;
+    background-color: $globalWhiteColor;
+
+    & * {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.article {
+  &__decription {
+    font-weight: 600;
+    text-align: center;
+    color: $globalDarkGreyColor;
+    margin: 0;
+  }
+}
+
+.footer {
+  background-color: $globalBlueColor;
+
+  &__wrapper{
+    @include displayFlex(row, space-between, flex-start);
+    padding-top: 5vh;
+  }
+
+  &__column {
+    height: 25vh;
+    @include displayFlex(column, flex-start, flex-start);
+
+    &-title {
+      color: $globalWhiteColor;
+      text-transform: uppercase;
+    }
+  }
+
+  &__links {
+    @include displayFlex(column, space-between, flex-start);
+    height: 40%;
+
+  }
+
+  &__link-item, &__link-item>a {
+    color: $globalWhiteColor;
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+
+  &__link-item>a {
+    &:hover {
+      color: $globalGreyColor;
+    }
+  }
+
+  &__social-item>img {
+    height: 32px;
+    opacity: 0.4;
+    margin-right: 5px;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__banner {
+    @include displayFlex(row, center, center);
+    background-color: $globalDarkBlueColor;
+    height: 74px;
+  }
+
+  &__banner-text {
+    color: $globalLightBlueColor;
+    font: {
+      size: 12px;
+      weight: 700;
+    }
+  }
+}

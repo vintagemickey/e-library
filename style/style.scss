@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import "../assets/fontawesome/scss/fontawesome";
+@import "variables";
+@import "mixins";
+@import "index";
+@import "search";
+@import "media";
+
+/*---BUTTONS---*/
+$buttonBGColor: #3C62C5;
+$buttonFontColor: $globalWhiteColor;
+$buttonFontSize: 14px;
+
+.button {
+  background-color: $buttonBGColor;
+  @include font($globalWhiteColor, $buttonFontSize, 400);
+  padding: 1.6vh 4.5vh;
+  border: none;
+  border-radius: $globalBorderRadius;
+
+  &:hover {
+    background-color: $globalDarkBlueColor;
+  }
+}
+
+.button, button, a, .header__profile-arrow {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+/*---FONTAWESOME ICONS---*/
+.fa-filter, .fa-angle-up {
+  color: $globalPinkColor;
+}
+
+* {
+  font-family: $globalFont;
+}
+
+body, header, main, .footer__wrapper {
+  margin: 0 auto;
+  color: $globalFontColor;
+  font-size: $globalFontSize;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  border: none;
+}
+
+#oval {
+  position: absolute;
+  background: url('../assets/ellipse.png') no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 72%;
+  z-index: -1;
+  top: 770px;
+  right: 0;
+}
+
+.spacer{
+  height: 10vh;
+}

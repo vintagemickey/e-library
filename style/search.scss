@@ -1,0 +1,339 @@
+.header__nav,
+.header__nav-links,
+.header__profile,
+.search__main,
+.search__result-item,
+.search__header,
+.search__filter-header,
+.search__filter-year-title,
+.search__filter-authors-title,
+.search__filter-imprint-title {
+  @include displayFlex(row, center, center);
+}
+
+.header {
+  box-shadow: $globalBoxShadow;
+  padding: 0 3vh;
+
+  &__nav, &__nav-links {
+    justify-content: space-between;
+  }
+
+  &__nav {
+    height: 50px;
+  }
+
+  &__logo {
+    height: 40px;
+  }
+
+  &__nav-links {
+    width: 30%;
+  }
+
+  &__search-form {
+    position: relative;
+  }
+
+  &__search-input {
+    width: 320px;
+    height: 40px;
+    border: $globalBorderStyle;
+    padding: 0 15px;
+    border-radius: $globalBorderRadius;
+  }
+
+  &__search-input::placeholder {
+    color: $globalGreyColor;
+    font-weight: 700;
+  }
+
+  &__search-button {
+    @include search-button($globalGreyColor, 18px, 10px, 10px);
+  }
+
+  &__search-button>a>img {
+    height: 19px;
+    margin-top: 3px;
+  }
+
+  &__lang, &__profile-name, &__profile-name {
+    border: none;
+    color: $globalDarkGreyColor;
+    font: {
+      size: 14px;
+      weight: 600;
+    };
+  }
+
+  &__profile-img {
+    height: 34px;
+    border-radius: 34px;
+    margin-right: 10px;
+  }
+
+  &__profile-name {
+    margin-right: 10px;
+  }
+
+  .header__profile-arrow {
+    color: $globalDarkGreyColor;
+  }
+}
+
+.search {
+
+  &__main {
+    align-items: flex-start;
+  }
+
+  &__results {
+    @include displayFlex(column, center, center);
+    box-shadow: $globalBoxShadow;
+    width: 125%;
+    padding: 5vh;
+  }
+
+  &__header {
+    @include displayFlex(row, space-between, flex-end);
+    width: 100%;
+    margin-bottom: 2vh;
+
+    &-text {
+      @include displayFlex(column, space-between, start);
+    }
+
+    &-number, &-number>span{
+      color: $globalPinkColor;
+      font: {
+        size: 14px;
+      };
+
+      span {
+        font-weight: 700;
+      }
+    }
+
+    &-title {
+      font: {
+        size: 25px;
+        weight: 700;
+      };
+      margin-top: 10px;
+    }
+
+    &-buttons {
+      @include displayFlex(row, space-between, flex-end);
+    }
+
+    &-button-list {
+      font-size: 20px;
+      margin-right: 5px;
+      color: $globalPinkColor;
+    }
+
+    &-button-grid {
+      font-size: 20px;
+      color: $globalDarkGreyColor;
+      border-left: $globalBorderStyle;
+      padding-left: 4px;
+    }
+
+    &-button-list, &-button-grid {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__result {
+    &-title {
+      font: {
+        size: 18px;
+        weight: 700;
+      };
+      margin-bottom: 10px;
+    }
+
+    &-item {
+      border-top: $globalBorderStyle;
+      padding: 20px 0;
+      justify-content: space-between;
+      width: 100%;
+
+      &:last-child {
+        border-bottom: $globalBorderStyle;
+      }
+    }
+
+    &-img {
+      height: 20vh;
+    }
+
+    &-description {
+      @include displayFlex(column, space-between, start);
+
+      &-item {
+        margin-bottom: 6px;
+        span {
+          font-weight: 700;
+        }
+      }
+    }
+
+    &-arrow {
+      font-size: 27px;
+      color: $globalBlueColor;
+      &:hover {
+        color: $globalLightBlueColor;
+      }
+    }
+  }
+
+  &__button-more, &__pagination {
+    height: 42px;
+    width: 100%;
+    background-color: $globalWhiteColor;
+    box-shadow: $globalBoxShadow;
+    font-weight: 700;
+  }
+
+  &__button-more {
+    border-radius: 4px;
+    margin-top: 50px;
+
+    &:hover {
+      background-color: $globalLightGreyColor;
+    }
+  }
+
+  &__pagination {
+    @include displayFlex(row, space-around, center);
+    margin-top: 20px;
+
+    &-item {
+      &-arrow, &-num {
+        color: $globalDarkGreyColor;
+        font: {
+          size: 12px;
+          weight: 700;
+        }
+      }
+    }
+  }
+
+  &__filters {
+    @include displayFlex(column, center, flex-start);
+    width: 25%;
+    box-shadow: $globalBoxShadow;
+    padding: 20px;
+    margin-left: 30px;
+
+    &-title {
+      @include displayFlex(row, space-between, flex-start);
+      justify-content: space-between;
+      width: 100%;
+      margin-bottom: 30px;
+
+      span {
+        font-weight: 700;
+      }
+
+
+    }
+  }
+
+  &__filter {
+    width: 100%;
+    margin-bottom: 20px;
+
+    &-header {
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    &-title {
+      font: {
+        size: 14px;
+        weight: 700;
+      }
+      margin-bottom: 10px;
+
+    }
+
+    &-year-form {
+      @include displayFlex(row, space-between, flex-start);
+
+      input::placeholder {
+        color: #C4C4C4;
+      }
+    }
+
+    &-year-from>input, &-year-to>input {
+      width: 95px;
+      height: 36px;
+      border: $globalBorderStyle;
+      font-size: 14px;
+      padding: 7px;
+    }
+
+    &-year-from, &-year-to {
+      position: relative;
+    }
+
+    &-year-clean {
+      position: absolute;
+      z-index: 1;
+      right: 7px;
+      top: 10px;
+      color: $globalGreyColor;
+    }
+
+    &-author-item, &-imprint-item {
+      margin-bottom: 10px;
+      font-size: 14px;
+
+      &:last-of-type {
+        @include displayFlex(row, end, center);
+      }
+    }
+
+    &-imprint-item {
+      display: flex;
+      align-items: center;
+    }
+
+    &-imprint {
+      &-checkbox {
+        border: 1px solid $globalGreyColor;
+        accent-color: white;
+        appearance: none;
+        height: 15px;
+        width: 15px;
+        position: relative;
+      }
+
+      &-checkbox:checked {
+        border: 2px solid $globalPinkColor;
+      }
+
+      &-checkbox:checked::after {
+        content: "";
+        background-image: url('../assets/check.svg');
+        background-repeat: no-repeat;
+        position: absolute;
+        top: -5px;
+        left: 0px;
+        width: 16px;
+        height: 16px;
+        color: #F21F5B;
+      }
+    }
+
+    &-authors-more, &-imprint-more {
+      text-decoration: underline;
+      color: $globalBlueColor;
+      font-size: 12px;
+    }
+  }
+}

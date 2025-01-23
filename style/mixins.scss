@@ -1,0 +1,29 @@
+@mixin displayFlex($flex-direction, $justify-content: space-between, $align-items: center) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin font($font-color, $font-size, $font-weight) {
+  color: $font-color;
+  font-size: $font-size;
+  font-weight: $font-weight;
+}
+
+@mixin search-button ($color, $font-size, $top, $right: 10px) {
+  position: absolute;
+  right: $right;
+  top: $top;
+  border-left: $globalBorderStyle;
+  background-color: $globalWhiteColor;
+  border-bottom: none;
+  border-right: none;
+  border-top: none;
+  padding-left: 10px;
+
+  .fa-magnifying-glass {
+    color: $color;
+    font-size: $font-size;
+  }
+}

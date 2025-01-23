@@ -1,0 +1,122 @@
+@use "sass:map";
+@use "sass:list";
+@use "sass:selector";
+
+$media: (
+  xxs: 480px,
+  xs: 640px,
+  sm: 768px,
+  md: 840px,
+  lg: 1024px,
+  xl: 1280px,
+  2xl: 1536px,
+  3xl: 3000px,
+);
+
+$width: (
+  xxs: 380px,
+  xs: 540px,
+  sm: 600px,
+  md: 700px,
+  lg: 800px,
+  xl: 1000px,
+  2xl: 1300px,
+  3xl: 1500px,
+);
+
+@mixin media($breakpoint, $property, $value, $elementSelector) {
+  @each $breakpoints, $size in $media {
+    @if $breakpoint==$breakpoints {
+      @media screen and (max-width: $size) {
+          #{$elementSelector} {
+            #{$property}: $value;
+          }
+        }
+      }
+    }
+  }
+
+@include media(3xl, width, map.get($width, 3xl), ".header-main");
+@include media(3xl, width, map.get($width, 3xl), "main");
+@include media(3xl, width, map.get($width, 3xl), ".footer__wrapper");
+
+@include media(2xl, width, map.get($width, 2xl), ".header-main");
+@include media(2xl, width, map.get($width, 2xl), "main");
+@include media(2xl, width, map.get($width, 2xl), ".footer__wrapper");
+
+@include media(xl, width, map.get($width, xl), ".header-main");
+@include media(xl, width, map.get($width, xl), "main");
+@include media(xl, width, map.get($width, xl), ".footer__wrapper");
+
+@include media(ld, width, map.get($width, lg), ".header-main");
+@include media(ld, width, map.get($width, lg), "main");
+@include media(ld, width, map.get($width, lg), ".footer__wrapper");
+
+@include media(md, width, map.get($width, md), ".header-main");
+@include media(md, width, map.get($width, md), "main");
+@include media(md, width, map.get($width, md), ".footer__wrapper");
+
+@include media(sm, width, map.get($width, sm), ".header-main");
+@include media(sm, width, map.get($width, sm), "main");
+@include media(sm, width, map.get($width, sm), ".footer__wrapper");
+
+@include media(xs, width, 100%, ".header-main");
+@include media(xs, width, 100%, "main");
+@include media(xs, width, 100%, ".footer__wrapper");
+
+@include media(xxs, width, 100%, ".header-main");
+@include media(xxs, width, 100%, "main");
+@include media(xxs, width, 100%, ".footer__wrapper");
+
+@include media(md, width, 570px, ".search-main__input");
+@include media(sm, width, 520px, ".search-main__input");
+@include media(xs, width, 470px, ".search-main__input");
+@include media(xxs, width, 360px, ".search-main__input");
+
+@include media(xs, padding, 1.6vh 1.5vh !important, ".button");
+@include media(xxs, padding, 1.6vh 1.5vh !important, ".button");
+
+@include media(xs, flex-direction, column, ".about");
+@include media(xxs, flex-direction, column, ".about");
+
+@include media(xs, width, 100% !important, ".about__article");
+@include media(xxs, width, 100% !important, ".about__article");
+
+@include media(xs, padding, 1.6vh 0 !important, ".about__article");
+@include media(xxs, padding, 1.6vh 0 !important, ".about__article");
+
+@include media(xs, margin-bottom, 1vh !important, ".about__article");
+@include media(xxs, margin-bottom, 1vh !important, ".about__article");
+
+@include media(md, padding, 0 1vh, ".header");
+@include media(sm, padding, 0 1vh, ".header");
+@include media(xs, padding, 0 1vh, ".header");
+@include media(xxs, padding, 0 1vh, ".header");
+
+@include media(md, display, none, ".header__search-form");
+@include media(sm, display, none, ".header__search-form");
+@include media(xs, display, none, ".header__search-form");
+@include media(xxs, display, none, ".header__search-form");
+
+@include media(md, display, none, ".search__filters");
+@include media(sm, display, none, ".search__filters");
+@include media(xs, display, none, ".search__filters");
+@include media(xxs, display, none, ".search__filters");
+
+@include media(xs, flex-direction, column, ".footer__wrapper");
+@include media(xxs, flex-direction, column, ".footer__wrapper");
+
+@include media(xs, height, 100%, ".footer__column");
+@include media(xxs, height, 100%, ".footer__column");
+
+@include media(xs, margin, 0 1vh, ".footer__column");
+@include media(xxs, margin, 0 1vh, ".footer__column");
+
+@include media(xs, display, none, "#oval");
+@include media(xxs, display, none, "#oval");
+
+@include media(lg, display, none, ".footer__column>img");
+@include media(md, display, none, ".footer__column>img");
+@include media(sm, display, none, ".footer__column>img");
+@include media(xs, display, none, ".footer__column>img");
+@include media(xxs, display, none, ".footer__column>img");
